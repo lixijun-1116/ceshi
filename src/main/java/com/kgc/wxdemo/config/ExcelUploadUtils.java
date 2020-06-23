@@ -22,7 +22,7 @@ import java.util.List;
  *
  */
 public class ExcelUploadUtils {
-
+//
     public static List<String[]> getExcelData(MultipartFile file) throws IOException {
         //checkFile(file);
         //获得Workbook工作薄对象
