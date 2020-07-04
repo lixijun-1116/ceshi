@@ -1,5 +1,6 @@
 package com.kgc.wxdemo.config;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -124,6 +125,30 @@ public class CSVUtil {
 
 
 		return isSuccess;
+	}
+
+	/**
+	 * 删除.csv文件
+	 * @param filePath 文件夹path
+	 * @param fileName  文件名称
+	 */
+	public static void deleteFile(String filePath, String fileName) {
+
+		File file = new File(filePath);
+
+		if (file.exists()) {
+			File[] files = file.listFiles();
+
+			for (int i = 0; i < files.length; i++) {
+				if (files[i].isFile()) {
+					System.out.println(files[i].getName());
+					if (files[i].getName().equals(fileName)) {
+						files[i].delete();
+						return;
+					}
+				}
+			}
+		}
 	}
 
 }
