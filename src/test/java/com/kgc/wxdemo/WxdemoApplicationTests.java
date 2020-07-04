@@ -9,6 +9,8 @@ import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -43,6 +45,19 @@ public class WxdemoApplicationTests {
         //将byte数组换成字符转
         String str1 = new String(sb,"UTF-8");
         System.out.println(str1);
+
+
+    }
+
+    @Test
+    public void test01(){
+        final int a = 5;
+        System.out.println("a:"+a);
+        final Map<String,String> map =new HashMap<>();
+        map.put("jj","55");
+        System.out.println("jj:"+map.get("jj"));
+        map.put("jj","88");
+        System.out.println("jj:"+map.get("jj"));
 
 
     }

@@ -103,6 +103,7 @@ public class JxlExcel {
                         //获取单元个中的值存入对象
                         User user = new User();
                         row.getCell(1).setCellType(CellType.STRING);
+                        row.getCell(3).setCellType(CellType.STRING);
 
                         user.setName(row.getCell(0).getStringCellValue());
                         user.setPassword(row.getCell(1).getStringCellValue());

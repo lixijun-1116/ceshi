@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +39,6 @@ public class ExcelController {
 
     @RequestMapping(value = "/uplode")
     public void uplode(MultipartFile file)throws Exception{
-        //ExcelUploadUtils excelUploadUtils = new ExcelUploadUtils();
 //        List<String[]> excelData = ExcelUploadUtils.getExcelData(file);
 //        List<User> list = new ArrayList<>();
 //        for(int i=0;i<excelData.size();i++){
@@ -47,6 +47,7 @@ public class ExcelController {
 //            user.setName(strings[0]);
 //            user.setPassword(strings[1]);
 //            user.setGender(strings[2]);
+//            user.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(strings[3]));
 //            list.add(user);
 //        }
         List<User> list = JxlExcel.readExcel(file);
