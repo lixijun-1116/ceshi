@@ -25,7 +25,7 @@ public class CSVUtil {
 	public static void main(String[] args) throws Exception {
 
 		// 测试导出
-		String filePath = "D:/test.csv";
+		String filePath = "D:/a.csv";
 //		List<String[]> dataList = new ArrayList<String[]>();
 //		for (int i = 0; i < 10; i++) {
 //			dataList.add(new String[] { "0" + i, "小明" + i, "java" + i });

@@ -14,20 +14,20 @@ public class CSVUtil2 {
 
 	public static void main(String[] args) {
 		// 测试 导出
-		 List<String> dataList = new ArrayList<String>();
-		 dataList.add("1,张三,男");
-		 dataList.add("2,李四,男");
-		 dataList.add("3,小红,女");
-		 boolean isSuccess = exportCsv(new File("D:/test.csv"), dataList);
-		 System.out.println(isSuccess);
+//		 List<String> dataList = new ArrayList<String>();
+//		 dataList.add("1,张三,男");
+//		 dataList.add("2,李四,男");
+//		 dataList.add("3,小红,女");
+//		 boolean isSuccess = exportCsv(new File("D:/test.csv"), dataList);
+//		 System.out.println(isSuccess);
 
 		// 测试 导入
-//		List<String> dataList = importCsv(new File("D:/装备台账.csv"));
-//		if (dataList != null && !dataList.isEmpty()) {
-//			for (String data : dataList) {
-//				System.out.println(data);
-//			}
-//		}
+		List<String> dataList = importCsv(new File("D:/装备台账.csv"));
+		if (dataList != null && !dataList.isEmpty()) {
+			for (String data : dataList) {
+				System.out.println(data);
+			}
+		}
 	}
 
 	/**
